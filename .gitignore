@@ -3,6 +3,10 @@
 .env
 *.sqlite
 
+## Docs/jekyll
+Gemfile.lock
+_site
+
 # Created by https://www.gitignore.io/api/linux,macos,python,windows
 
 ### Linux ###

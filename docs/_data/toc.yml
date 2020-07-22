@@ -1,0 +1,14 @@
+- title: Documentation
+  url: docs
+  links:
+    - title: "User Guide"
+      url: "docs/getting-started"
+      children:
+        - title: Getting Started
+          url: "docs/getting-started/development"
+        - title: Templates and Features
+          url: "docs/getting-started/templates"
+    - title: "About"
+      url: "about"
+    - title: "News"
+      url: "news"
