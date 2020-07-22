@@ -10,5 +10,5 @@ description: Getting Started with gcp-flask-stanford
 
 The documentation here will get you started to use the GCP Flask Stanford templates.
 
- - [Getting Started](development/) with development and setup for your needs.
- - [Templates](templates/) and examples available for customization.
+ - [Getting Started](development) with development and setup for your needs.
+ - [Templates](templates) and examples available for customization.
