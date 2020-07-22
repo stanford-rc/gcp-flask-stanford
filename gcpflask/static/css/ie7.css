@@ -1,0 +1,64 @@
+/* CSS Document */
+@import url('/assets/css/ie/bootstrap-ie7.css');
+@import url('/assets/css/ie/font-awesome-ie7.css');
+
+#search-field {
+  width: 10em;
+  height: 1.5em;
+}
+
+.carousel-indicators {
+  width: auto;
+  margin-left: 45%;
+}
+.carousel-indicators li {
+  zoom: 1;
+  display: inline;
+}
+
+#event-list .event-date .event-day {
+  line-height: 1;
+}
+
+.list-pull-heading {
+  clear: both;
+}
+
+.ie7-clear {
+  font-size: 1em;
+  height: 1em;
+  clear: both;
+}
+
+/*** replace display:table-cell ***/
+.postcard-left > div,
+.info-box .icon-container,
+.list-pull-heading, .list-content {
+  display: block;
+  float: left;
+}
+
+/* Footer two column */
+#global-footer #bottom-text {
+        width: 50%;
+}
+
+#global-footer #bottom-text ul li {
+        display: inline !important;
+}
+#global-footer #bottom-logo {
+  margin:-5px 0 10px;
+}
+#global-footer #bottom-logo img { 
+  width: 105px;
+}
+#global-footer .clear {
+  clear:none;
+}
+#global-footer p.copyright {
+  text-align:left;
+  margin-left:8px; /* IE7 specific */
+  padding-left:20px; /* IE7 specific */
+  padding-top:10px; /* IE7 specific */
+  width:600px; /* IE7 specific */
+}

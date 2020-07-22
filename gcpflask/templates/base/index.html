@@ -1,0 +1,17 @@
+{% extends "base/base.html" %}    
+{% block content %}
+<div class="row">
+    <div class="col-md-12" style="padding-top:30px">
+        <h2 style="padding-bottom:20px" class="text-center">Stanford Flask Templates</h2>
+        <img class="center-block" style="border-radius:100px; width:100px; margin-bottom:40px" src="{{ url_for('static', filename='images/SRCC-square-red.png') }}" alt="" />
+        <p>Choose any of the views for preview to get started! Don't see what you are looking for? <a href="{{ GITHUB_REPOSITORY }}/issues">let us know!</a></p>
+	<div class="list-group">
+	  <a href="/cardinal" class="list-group-item list-group-item-action">Cardinal Theme</a>
+	  <a href="#" class="list-group-item list-group-item-action">Modern Theme</a>
+	  <a href="#" class="list-group-item list-group-item-action">API Example</a>
+	  <a href="#" class="list-group-item list-group-item-action">Documentation</a>
+	  <a href="{{ GITHUB_REPOSITORY }}" class="list-group-item list-group-item-action">GitHub Repository</a>
+	</div>
+    </div>
+</div>
+{% endblock %}

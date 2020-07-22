@@ -1,0 +1,66 @@
+{% extends "cardinal/base.html" %}    
+{% block content %}    
+<!-- main content -->
+      <h1 class="hide">Cardinal Theme</h1>
+      <div class="row">
+                <!-- Main column -->
+        <div id="main-content" class="col-md-9 col-md-push-3" role="main">
+          <div id="feature-banner" class="margin-bottom-30"> <img class="img-responsive" src="http://www.stanford.edu/assets/su-images/feature/ht_quad6am.jpg" />
+            <div class="feature-caption">
+              <h3>A Stanford-branded HTML theme</h3>
+              <p>The Cardinal Theme mirrors the look and feel of the Stanford homepage.</p>
+            </div>
+          </div>
+          <h2 class="headline">Announcements</h2>
+          <p>This is a sample area for latest news and announcements. Items below use a "postcard" layout which allows you to float a thumbnail image to the left of your text.</p>
+
+          <div class="postcard-left">
+            <div class="postcard-image"><img src="{{ url_for('static', filename='images/cardinal/QuadArchNPalms270.jpg') }}" alt="" /></div>
+            <div class="postcard-text">
+              <h3><a href="#">Example Announcement</a></h3>
+              <p class="descriptor">March 21, 2014</p>
+              <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean imperdiet lobortis libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean vitae tortor ligula, quis laoreet ante. Phasellus in turpis ac elit consectetur viverra. Praesent nec massa vitae dui facilisis venenatis et at nisi. Proin fringilla vulputate velit, vel fermentum velit viverra nec.</p>
+            </div>
+          </div>
+
+          <div class="postcard-left">
+            <div class="postcard-image"><img src="{{ url_for('static', filename='images/cardinal/QuadArchNPalms270.jpg') }}" alt="" /></div>
+            <div class="postcard-text">
+              <h3><a href="#">Example Announcement</a></h3>
+              <p class="descriptor">March 1, 2014</p>
+              <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean imperdiet lobortis libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean vitae tortor ligula, quis laoreet ante. Phasellus in turpis ac elit consectetur viverra. Praesent nec massa vitae dui facilisis venenatis et at nisi. Proin fringilla vulputate velit, vel fermentum velit viverra nec. <a href="#">Download the document</a></p>
+            </div>
+          </div>
+
+          <div class="postcard-left">
+            <div class="postcard-image"><img src="{{ url_for('static', filename='images/cardinal/QuadArchNPalms270.jpg') }}" alt="" /></div>
+            <div class="postcard-text">
+              <h3><a href="#">Example Announcement</a></h3>
+              <p class="descriptor">February 15, 2014</p>
+              <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean imperdiet lobortis libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean vitae tortor ligula, quis laoreet ante. Phasellus in turpis ac elit consectetur viverra. Praesent nec massa vitae dui facilisis venenatis et at nisi. Proin fringilla vulputate velit, vel fermentum velit viverra nec.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="sidebar-second" class="col-md-3 col-md-pull-9">
+          <div class="well">
+            <h2>About Stanford Cardinal</h2>
+            <p>Stanford Cardinal is available both as HTML / Dreamweaver templates and as a WordPress theme. It is based on the design of the Stanford homepage, and is ready to use without any additional styling.</p>
+            <p><a class="more-link" href="http://wordpressthemes.stanford.edu/"><i class="fa fa-chevron-circle-right"></i> <span>See demo WordPress site</span></a></p>
+            <p>Stanford Cardinal can be used only for the official websites of University academic departments, centers, research groups and administrative units. It is available by request for this purpose.</p>
+            <p><a class="more-link" href="http://helpsu.stanford.edu/?pcat=stanfordhomepage"><i class="fa fa-chevron-circle-right"></i> <span>Request Stanford Cardinal</span></a></p>
+          </div>
+          <div class="well">
+            <h2>In the Spotlight</h2>
+            <img src="{{ url_for('static', filename='images/cardinal/LemonsNTower1170.jpg') }}" alt="" />
+            <p class="caption">This is an optional image caption.</p>
+            <p>This is a display element called a "well".  It can be used in either sidebar to highlight content in a shaded box.</p>
+            <p>A <em>well</em> is perfect for featuring an event or calling out highlighted information.</p>
+            <p><a class="more-link" href="#"><i class="fa fa-chevron-circle-right"></i> <span>More information</span></a></p>
+          </div>
+        </div>
+
+
+      </div>
+{% endblock %}

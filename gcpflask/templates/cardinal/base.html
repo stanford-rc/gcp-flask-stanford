@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+<title>{{ TITLE }}</title>
+<!-- TemplateParam name="theme" type="text" value="cardinal" -->
+
+<!-- Meta -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Site / page description" />
+<meta name="author" content="Stanford Department or Group" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ TITLE }}" />
+<meta property="og:description" content="{{ description }}" />
+{% if TWITTER %}<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@{{ TWITTER }}" />
+<meta name="twitter:title" content="{{ TITLE }}" />
+<meta name="twitter:description" content="{{ description }}" />
+<meta name="twitter:image" content="{{ image }}" />{% endif %}
+
+<!-- CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css" />
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.min.css') }}" type="text/css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}" type="text/css"/>
+<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ie8.css') }}" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ie7.css') }}" /><![endif]-->
+
+<!-- JS and jQuery --> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+<script src="{{ url_for('static', filename='js/modernizr.custom.17475.js') }}"></script> 
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script> 
+
+<!--[if lt IE 9]><script src="{{ url_for('static', filename='js/respond.js') }}"></script><![endif]--> 
+
+<!-- custom JS -->
+<script src="{{ url_for('static', filename='js/base.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+</head>
+
+<body class="home"> <!-- class="home" underlines the Home link in the top nav -->
+<div id="su-wrap"> <!-- used to force footer to bottom of short pages -->
+  <div id="su-content"> <!-- used to force footer to bottom of short pages --> 
+    
+    <!--=== Top ===-->
+    <div id="top">
+      <div class="container"> 
+        <!--=== Skip links ===-->
+        <div id="skip"> <a href="#content" onClick="$('#content').focus()">Skip to content</a> </div>
+        <!-- /Skip links --> 
+      </div>
+    </div>
+    <!--/top--> 
+    
+    <!--=== Header ===-->
+    <div id="header" class="clearfix" role="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8"> 
+            <!-- Logo -->
+            <div id="logo" class="clearfix"> <a href="http://www.stanford.edu/"><img class="img-responsive" src="{{ url_for('static', filename='images/cardinal/stanford-white@2x.png') }}"  alt="Stanford University" /></a> </div>
+            <!-- /logo -->
+            <div id="signature">
+              <div id="site-name">
+                <a href="/">
+                  <span id="site-name-1">Cardinal Theme</span>
+                  <span id="site-name-2">Optional line 2 - add two-line-signature to body class to display</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Menu -->
+    <div id="mainmenu" class="clearfix" role="navigation">
+      <div class="container">
+        <div class="navbar navbar-default"> 
+          
+          <!-- main navigation -->
+          <button type="button" class="navbar-toggle btn-navbar" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="menu-text">Menu</span></button>
+          <!-- /nav-collapse -->
+          
+          <div class="navbar-collapse collapse"> 
+            <!--search box-->
+            <div id="nav-search" role="search">
+              <form action="http://www.stanford.edu/search" method="get" id="search-form" accept-charset="UTF-8">
+                <h2 class="hidden">Search form</h2>
+                <label class="hidden" for="search-field">Search term</label>
+                <input name="cx" type="hidden" value="003265255082301896483:sq5n7qoyfh8">
+                <input name="cof" type="hidden" value="FORID:9">
+                <input name="ie" type="hidden" value="UTF-8">
+                <!-- replace value in next line with your site URL -->
+                <input name="as_sitesearch" type="hidden" value="facts.stanford.edu">
+                <input title="Search string" class="input-medium" placeholder="Search this site&hellip;" type="text" id="search-field" name="q" value="" size="15" maxlength="128" />
+                <button id="search-btn" type="submit" name="submit"  aria-label="Search" formmethod="get"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+            <div  role="navigation">
+              <div id="primary-nav">
+                <ul class="nav navbar-nav" aria-label="primary navigation">
+                  <li id="nav-home"> <a href="/cardinal">Home</a></li>
+                  <li id="nav-1"> <a href="/cardinal/right-sidebar">Right Sidebar</a> </li>
+                  <li id="nav-2"> <a href="/cardinal/left-sidebar">Left Sidebar</a> </li>
+                  <li id="nav-3"> <a href="/cardinal/two-sidebars">Two Sidebars</a> </li>
+                  <li id="nav-4"> <a href="/cardinal/no-sidebars">No Sidebars</a> </li>
+                  <li id="nav-5"> <a href="/cardinal/wide">Wide</a> </li>
+                  <li id="nav-6"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                   <ul class="dropdown-menu">
+                     <li><a  href="#">Submenu 1</a></li>
+                     <li><a  href="#">Submenu 2</a></li>
+                     <li><a  href="#">Submenu 3</a></li>
+                     <li><a  href="#">Submenu 4</a></li>
+                     <li><a  href="#">Submenu 5</a></li>
+                   </ul>
+                  </li>
+                  <li id="nav-7">{% if current_user.is_authenticated %}<a href="/logout">Logout</a>{% else %}<a href="/login">Login</a></li>{% endif %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- /nav-collapse --> 
+        </div>
+        <!-- /navbar --> 
+        
+      </div>
+      <!-- /container --> 
+    </div>
+    <!-- /mainmenu --> 
+
+    <div id="content" class="container" role="main" tabindex="0">
+    {% include "messages/messages.html" %}    
+    {% block content %}{% endblock %}
+    </div>
+    
+  </div>
+  <!-- #su-content --> 
+</div>
+<!-- #su-wrap --> 
+
+<!-- BEGIN footer -->
+<div id="footer" class="clearfix footer" role="contentinfo">
+  <!-- Fat footer start -->
+  <div class="container">
+    <div id="footer-content" class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-push-3">
+        <h3>More about us</h3>
+        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean imperdiet lobortis libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean vitae tortor ligula, quis laoreet ante. Phasellus in turpis ac elit consectetur viverra. Praesent nec massa vitae dui facilisis venenatis et at nisi.</p>
+      </div>
+      <div class="col-xs-12 col-sm-3 col-sm-push-3">
+        <h3>Related Links</h3>
+        <ul>
+          <li><a href="#">Particularly relevant</a></li>
+          <li><a href="#">Related and really quite interesting</a></li>
+          <li><a href="#">Useful in certain circumstances</a></li>
+          <li><a href="#">Purely tangential information</a></li>
+        </ul>
+      </div>
+      <div id="social-icons" class="col-xs-12 col-sm-3 col-sm-pull-9">
+        <h3>Connect with us</h3>
+        {% if FACEBOOK %}<a href="http://facebook.com/{{ FACEBOOK }}"><img alt="Facebook" src="{{ url_for('static', filename='images/social/facebook@2x.png') }}" /></a>{% endif %}
+        {% if TWITTER %}<a href="http://twitter.com/{{ TWITTER }}"><img alt="Twitter" src="{{ url_for('static', filename='images/social/twitter@2x.png') }}" /></a>{% endif %}
+        {% if YOUTUBE %}<a href="http://youtube.com/{{ YOUTUBE }}"><img alt="YouTube" src="{{ url_for('static', filename='images/social/youtube@2x.png') }}" /></a>{% endif %}
+      </div>
+    </div>
+  </div>
+  <!-- Fat footer end -->
+  
+  <!-- Global footer snippet start -->
+  <div id="global-footer">
+    <div class="container">
+      <div class="row">
+        <div id="bottom-logo" class="col-xs-6 col-sm-2"> <a href="http://www.stanford.edu"> <img src="{{ url_for('static', filename='images/footer-stanford-logo@2x.png') }}" alt="Stanford University" width="105" height="49"/> </a> </div>
+        <!-- #bottom-logo end -->
+        <div id="bottom-text" class="col-xs-6 col-sm-10">
+          <ul>
+            <li class="home"><a href="http://www.stanford.edu">SU Home</a></li>
+            <li class="maps alt"><a href="http://visit.stanford.edu/plan/maps.html" class="su-link" data-ua-action="visit.stanford.edu/plan/maps" data-ua-label="global-footer">Maps &amp; Directions</a></li>
+            <li class="search-stanford"><a href="http://stanford.edu/search/">Search Stanford</a></li>
+            <li class="terms alt"><a href="http://www.stanford.edu/site/terms.html">Terms of Use</a></li>
+            <li class="emergency-info"><a href="http://emergency.stanford.edu/" class="su-link" data-ua-label="global-footer">Emergency Info</a></li>
+          </ul>
+        </div>
+        <!-- .bottom-text end -->
+        <div class="clear"></div>
+        <p class="copyright vcard col-sm-10">&copy; <span class="fn org">Stanford University</span>.&nbsp; <span class="adr"> <span class="locality">Stanford</span>, <span class="region">California</span> <span class="postal-code">94305</span></span>. <span id="termsofuse"><a href="http://www.stanford.edu/group/security/dmca.html" class="su-link" data-ua-action="copyright-complaints" data-ua-label="global-footer">Copyright Complaints</a>&nbsp;&nbsp;&nbsp;<a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4" class="su-link" data-ua-action="trademark-notice" data-ua-label="global-footer">Trademark Notice</a></span></p>
+      </div>
+      <!-- .row end --> 
+    </div>
+    <!-- .container end --> 
+  </div>
+  <!-- Global footer snippet end --> 
+  
+</div>
+<!-- END footer --> 
+
+</body>
+</html>
