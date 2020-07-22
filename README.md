@@ -1,6 +1,6 @@
 # GCP Flask + Stanford Starter Template
 
-![docs/assets/images/stanford-starter-templates.png](docs/assets/images/stanford-starter-templates.png)
+![docs/assets/images/stanford-flask-templates.png](docs/assets/images/stanford-flask-templates.png)
 
 > Google Cloud Project Flask + Stanford Starter Template
 
