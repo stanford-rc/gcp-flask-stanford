@@ -21,12 +21,10 @@ def inject_configvars():
     """inject global configuration variables (title, twitter, etc.) into
        pages from config.py
     """
-    print(app.config.keys())
     items = {}
     for key in ["TITLE", "TWITTER", "GITHUB_REPOSITORY"]:
         if key in app.config and app.config[key]:
             items[key] = app.config[key]
-    print(items)
     return items
 
 
