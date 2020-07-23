@@ -60,8 +60,15 @@ The main index view is a small portal to direct you to views and features availa
 
 ![{{ site.baseurl }}/assets/images/stanford-flask-templates.png]({{ site.baseurl }}/assets/images/stanford-flask-templates.png)
 
+## Testing
 
-### Deployment
+A set of example tests are provided in [test_gcpflask.py](https://github.com/stanford-rc/gcp-flask-stanford/blob/master/test_gcpflask.py), and you can read more about testing in flask [here](https://flask.palletsprojects.com/en/1.1.x/testing/). You can run local testing with pytest as follows:
+
+```bash
+pytest -sv test_gcpflask.py
+```
+
+## Deployment
 
 The instructions here will show you how to deploy on Google App Engine (not written yet).
 

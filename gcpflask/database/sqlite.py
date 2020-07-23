@@ -2,6 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 import logging
+import os
 
 logging.basicConfig(level=logging.INFO)
 bot = logging.getLogger("gcpflask.database")
@@ -17,6 +18,9 @@ def init_db(self):
     # Database Setup, use default if uri not provided
     if self.database == "sqlite":
         self.database = "sqlite:///flaskapp.sqlite"
+        database_file = os.getenv("FLASKAPP_DATABASE_FILE")
+        if database_file is not None:
+            self.database = "sqlite:///%s" % database_file
 
     bot.info("Database located at %s" % self.database)
     self.engine = create_engine(self.database, convert_unicode=True)
