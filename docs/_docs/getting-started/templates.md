@@ -9,7 +9,7 @@ Features include:
 
  - [several branded themes to choose from](#templates)
  - a basic user and registration model
- - a restful API example
+ - [a restful API example](../api)
  - several database options, sqlite, postgres and mysql
  - examples of testing for your code
 
@@ -22,7 +22,7 @@ for using or customizing any of the features above, please don't hesitate to
 
 The gcp flask application provides several templates and examples for you to start work
 for your project! If you need any help, please don't hesitate to [open an issue](https://github.com/stanford-rc/gcp-flask-stanford/issues)
-or reach out to [Research Software Engineering Services](https://stanford-rc.github.io/rse-services/contact).
+or reach out to [Research Software Engineering Services](https://stanford-rc.github.io/rse-services/request).
 
 ## Cardinal Theme
 
