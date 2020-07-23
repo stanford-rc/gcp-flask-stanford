@@ -12,4 +12,4 @@ The documentation here will get you started to use the GCP Flask Stanford templa
 
  - [Getting Started](development) with development and setup for your needs.
  - [Templates](templates) and examples available for customization.
- - [Application Programming Interface](api.md) example for a RESTful API
+ - [Application Programming Interface](api) example for a RESTful API

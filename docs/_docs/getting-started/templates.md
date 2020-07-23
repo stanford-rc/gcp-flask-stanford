@@ -9,7 +9,7 @@ Features include:
 
  - [several branded themes to choose from](#templates)
  - a basic user and registration model
- - [a restful API example](../api)
+ - [a restful API example](api)
  - several database options, sqlite, postgres and mysql
  - examples of testing for your code
 
