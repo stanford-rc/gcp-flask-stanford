@@ -1,5 +1,6 @@
 Flask==1.0.2
 Flask-WTF==0.14.2
+flask-restful==0.3.8
 flask-login==0.5.0
 pyrebase==3.0.27
 werkzeug==0.16.1

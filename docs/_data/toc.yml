@@ -8,6 +8,8 @@
           url: "docs/getting-started/development"
         - title: Templates and Features
           url: "docs/getting-started/templates"
+        - title: Application Programming Interface
+          url: "docs/getting-started/api"
     - title: "About"
       url: "about"
     - title: "News"
