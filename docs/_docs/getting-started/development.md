@@ -70,6 +70,98 @@ pytest -sv test_gcpflask.py
 
 ## Deployment
 
-The instructions here will show you how to deploy on Google App Engine (not written yet).
+When you are ready to deploy to app engine, first make sure that you are again
+authenticated to use the correct project:
 
-**under development**
+```bash
+$ gcloud auth application-default login
+$ gcloud config set project <myproject>
+```
+
+You'll first want to enable app engine, and you'll need to choose a zone. If you get a permission
+denied error, add permissions for app engine to the username associated with your account on the [Google Cloud Interface](https://console.cloud.google.com/iam-admin/iam). When permissions are correct, the following commands will work.
+
+```bash
+$ gcloud app create --project=srcc-dinosaur-dev
+```
+
+When you are ready, deploy your app!
+
+```bash
+$ gcloud app deploy
+Initializing App Engine resources...done.                                                                                                
+Services to deploy:
+
+descriptor:      [/home/vanessa/Desktop/Code/gcp-flask-stanford/app.yaml]
+source:          [/home/vanessa/Desktop/Code/gcp-flask-stanford]
+target project:  [srcc-dinosaur-dev]
+target service:  [default]
+target version:  [xxxxxxxxxxxxxxxxx]
+target url:      [https://srcc-dinosaur-dev.uc.r.appspot.com]
+
+
+Do you want to continue (Y/n)?  y
+
+Beginning deployment of service [default]...
+╔════════════════════════════════════════════════════════════╗
+╠═ Uploading 118 files to Google Cloud Storage              ═╣
+╚════════════════════════════════════════════════════════════╝
+File upload done.
+Updating service [default]...done.                                                                                                       
+Setting traffic split for service [default]...done.                                                                                      
+Deployed service [default] to [https://srcc-dinosaur-dev.uc.r.appspot.com]
+
+You can stream logs from the command line by running:
+  $ gcloud app logs tail -s default
+
+To view your application in the web browser run:
+  $ gcloud app browse
+```
+
+In the above we see:
+
+ - a confirmation of app metadata
+ - files uploaded to Google Storage
+ - the final deployed URL.
+ - commands to show logs, or open to the url (browse).
+
+Note that the .gcloudignore file is important to not upload your docs, Python environment,
+or other metadata or secrets. Speaking of environment variables, if you need them you can
+add them to your [app.yml file](https://cloud.google.com/appengine/docs/standard/python/config/appref). 
+Indeed, if you needed to write all of these functions (e.g., build a container, have static
+files uploaded to storage, etc.) it would have been very cumbersome. But this deployment
+is in fact incredibly easy! App Engine is great because you pay for what you use, and
+the base containers are maintained for you. And a few final tips:
+
+ - if you need to re-do the storage upload, you can delete the buckets entirely (both for staging and production) and they will be re-generated.
+
+## Cleaning Up
+
+You should navigate to App Engine --> Settings and then click on "Disable Application" to permanently disable it.
+Cleaning up also then means:
+
+ - deleting the production and staging storage buckets for your app
+ - deleting the storage artifacts bucket (e.g., logs) if they are not needed.
+
+
+## Next Steps
+
+By default, the database (sqlite) won't work on app engine because it's a read only file
+system. [Google Cloud Managed SQL](https://cloud.google.com/sql) is an option, however it's expensive (typically $55 a month)
+and so you might consider requesting [Stanford Managed SQL](https://uit.stanford.edu/service/sql)
+instead. You would then export the `FLASKAPP_DATABASE` in your local .env file for local testing and
+development (e.g., you would likely want to test/create the database before deployment):
+
+```bash
+# This is the default
+export FLASKAPP_DATABASE=sqlite
+
+# MySql and Postgres
+export FLASKAPP_DATABASE=mysql://<username>:<password>@<host>/<database-name>
+export FLASKAPP_DATABASE=postgresql://<username>:<password>@<host>:5432/<database-name>
+```
+
+More details on writing database strings for sqlalchemy are [here](https://docs.sqlalchemy.org/en/13/core/engines.html). 
+And then also add the environment variable in your app.yml which **must not be added to a public
+GitHub repository, or even a private one for that matter!**
+
