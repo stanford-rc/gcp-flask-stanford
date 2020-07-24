@@ -82,7 +82,7 @@ You'll first want to enable app engine, and you'll need to choose a zone. If you
 denied error, add permissions for app engine to the username associated with your account on the [Google Cloud Interface](https://console.cloud.google.com/iam-admin/iam). When permissions are correct, the following commands will work.
 
 ```bash
-$ gcloud app create --project=srcc-dinosaur-dev
+$ gcloud app create --project=<myproject>
 ```
 
 When you are ready, deploy your app!
