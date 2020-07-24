@@ -24,6 +24,38 @@ The gcp flask application provides several templates and examples for you to sta
 for your project! If you need any help, please don't hesitate to [open an issue](https://github.com/stanford-rc/gcp-flask-stanford/issues)
 or reach out to [Research Software Engineering Services](https://stanford-rc.github.io/rse-services/request).
 
+## Modern
+
+If you want a multi-page application with a relatively modern look that is easy to customize,
+you can't do much better than a theme that uses Bootstrap! The modern template here can get you started.
+
+**home**
+
+The home page shows a large image with prominent information like links, announcements, and a spotlight:
+
+![{{ site.baseurl }}/assets/images/modern/home.png]({{ site.baseurl }}/assets/images/modern/home.png)
+
+<br>
+
+
+**login**
+
+The login page shows what you would expect:
+
+![{{ site.baseurl }}/assets/images/modern/login.png]({{ site.baseurl }}/assets/images/modern/login.png)
+
+<br>
+
+
+**register**
+
+Alon with the registration page.
+
+![{{ site.baseurl }}/assets/images/modern/register.png]({{ site.baseurl }}/assets/images/modern/register.png)
+
+<br>
+
+
 ## Single Page
 
 It's a common use case to want to quickly deploy a single page portal to share a project description, collaborators,
