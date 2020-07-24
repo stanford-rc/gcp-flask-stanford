@@ -68,6 +68,8 @@ A set of example tests are provided in [test_gcpflask.py](https://github.com/sta
 pytest -sv test_gcpflask.py
 ```
 
+{% include alert.html title="Stanford Minimum Security Requirements" type="warning" content="Before deploying any final application, please ensure that it meets the Stanford Minimum Security Requirements: https://uit.stanford.edu/guide/securitystandards#security-standards-applications" %}
+
 ## Deployment
 
 When you are ready to deploy to app engine, first make sure that you are again
