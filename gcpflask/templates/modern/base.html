@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+
+        <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+        <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+        <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+        <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{ TITLE }}</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Site / page description" />
+	<meta name="author" content="Stanford Department or Group" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{{ TITLE }}" />
+	<meta property="og:description" content="{{ description }}" />
+	{% if TWITTER %}<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@{{ TWITTER }}" />
+	<meta name="twitter:title" content="{{ TITLE }}" />
+	<meta name="twitter:description" content="{{ description }}" />
+	<meta name="twitter:image" content="{{ image }}" />{% endif %}
+
+        {% include "modern/google_analytics.html" %}
+
+        <!-- Google Webfonts -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,500' rel='stylesheet' type='text/css'>
+        <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='modern/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='modern/css/toastr.min.css') }}" media="screen" type="text/css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='modern/css/simple-line-icons.css') }}">
+	<link href="{{ url_for('static', filename='modern/css/mdb.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='modern/css/orders.css') }}" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='modern/css/style.css') }}">
+
+        {% block head %}{% endblock %}
+        {% block functions %}{% endblock %}
+    </head>
+
+    {% block body %}
+    <body>
+        
+    {% include "modern/nav.html" %}
+    <div class="container" style="padding-top:100px">
+        {% block content %}{% endblock %}
+    </div>
+    {% include "modern/footer.html" %}
+    {% block footer %}{% endblock %}
+
+    <script src="{{ url_for('static', filename='modern/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='modern/js/toastr.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='modern/js/bootstrap.bundle.min.js') }}"></script>
+    <script>
+	$(function () {
+	  var lastScrollTop = 0;
+	  var $navbar = $('.navbar');
+
+	  $(window).scroll(function(event){
+	    var st = $(this).scrollTop();
+	    if (st > lastScrollTop) { // scroll down      
+	      $navbar.hide();
+	    } else { // scroll up      
+	      $navbar.show();
+	    }
+	    lastScrollTop = st;
+	  });
+	});
+    </script>
+    {% block scripts %}{% endblock %}
+    {% block pagescripts %}{% endblock %}
+
+    </body>
+    {% endblock %}
+</html>

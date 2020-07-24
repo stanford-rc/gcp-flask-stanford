@@ -22,7 +22,7 @@ def client():
 
 def test_basic_views(client):
     """Test empty views"""
-    for view in ["/", "/cardinal"]:
+    for view in ["/", "/cardinal", "/modern", "/singlepage"]:
         rv = client.get(view)
         assert rv.status_code == 200
 
