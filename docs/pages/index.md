@@ -4,6 +4,8 @@ title: Google Cloud Project + Flask Stanford Documentation
 permalink: /
 ---
 
+![{{ site.baseurl }}/assets/images/stanford-flask-templates.png]({{ site.baseurl }}/assets/images/stanford-flask-templates.png)
+
 > Welcome to the gcp-flask-stanford Documentation base!
 
 This is the first of many templates that takes the opinion that it shouldn't be a lot

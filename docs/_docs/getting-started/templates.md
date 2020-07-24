@@ -24,6 +24,42 @@ The gcp flask application provides several templates and examples for you to sta
 for your project! If you need any help, please don't hesitate to [open an issue](https://github.com/stanford-rc/gcp-flask-stanford/issues)
 or reach out to [Research Software Engineering Services](https://stanford-rc.github.io/rse-services/request).
 
+## Single Page
+
+It's a common use case to want to quickly deploy a single page portal to share a project description, collaborators,
+and perhaps some results. The single page template provides an example of that, using [Chart.js](https://www.chartjs.org/) to render
+a plot of data. See the [visualization](#visualization) section for quick tips on different strategies to create charts.
+
+**top**
+
+The top of this template can proudly show a title for your page, and quick description:
+
+![{{ site.baseurl }}/assets/images/singlepage/top.png]({{ site.baseurl }}/assets/images/singlepage/top.png)
+
+<br>
+
+
+**navigation**
+
+The navigation bar is sticky, meaning that it moves with the page. Here we scroll to the collaborators section
+and the navigation bar moves with us.
+
+![{{ site.baseurl }}/assets/images/singlepage/nav.png]({{ site.baseurl }}/assets/images/singlepage/nav.png)
+
+<br>
+
+
+**tool**
+
+Finally, the main tool shows an interactive chart, courtesy of Chart.js. You could imagine having a tool, form,
+or other analysis write up here.
+
+![{{ site.baseurl }}/assets/images/singlepage/tool.png]({{ site.baseurl }}/assets/images/singlepage/tool.png)
+
+<br>
+
+
+
 ## Cardinal Theme
 
 The [Stanford Cardinal Theme](http://web.stanford.edu/group/webdev/cardinal/) provides you with standard views for:
@@ -77,6 +113,19 @@ Along with login and registration views.
 
 <br>
 
+
+
+## Visualization
+
+For visualization, you can generally take a few approaches:
+
+ 1. Render plots on the server side and display them as png images
+ 2. Generate data on the server side and send to a front end view
+ 3. Embed both data and JavaScript in the front end to generate a visualization
+
+For point 2, this could either be done with templating, or a more interactive get/post request
+to customize data for the user. If you would like help with any of these approaches, please
+reach out to [Research Software Engineering Services](https://stanford-rc.github.io/rse-services/request).
 
 ## Extra Features
 
