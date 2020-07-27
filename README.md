@@ -22,9 +22,9 @@ The template includes:
 
 ## Getting Started
 
-You can jump in to the [documentation](https://stanford-rc.github.io/gcp-flask-template) to
+You can jump in to the [documentation](https://stanford-rc.github.io/gcp-flask-stanford) to
 get started. If you have any requests for features or questions, please don't hesitate
-to [open an issue](https://www.github.com/stanford-rc/gcp-flask-template/issues).
+to [open an issue](https://www.github.com/stanford-rc/gcp-flask-stanford/issues).
 
 ## Extra Features
 
